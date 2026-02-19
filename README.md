@@ -171,7 +171,7 @@ python dashboards.py
 
 ---
 
-## 📈 Sample Output
+## 📈 Sample Outputs
 <img width="554" height="516" alt="download" src="https://github.com/user-attachments/assets/b897e035-7261-420c-9bb0-a9b04c9fbada" />
 <img width="554" height="505" alt="download" src="https://github.com/user-attachments/assets/49f773e7-70e8-4ab6-8e0a-dbd1c3ef2519" />
 <img width="389" height="409" alt="download" src="https://github.com/user-attachments/assets/e2a95375-164a-4fc9-9ef4-6ef318cc80c6" />
@@ -197,7 +197,7 @@ python dashboards.py
 ## 👨‍💻 Author
 
 Mahender Reddy  
-Data Engineering Project  
+Data Engineering Project (Python+SQL) 
 Healthcare Informatics  
 
 ---
