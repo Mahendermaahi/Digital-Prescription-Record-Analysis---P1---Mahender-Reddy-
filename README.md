@@ -1,276 +1,205 @@
-# Digital-Prescription-Record-Analysis
+# 💊 Digital Prescription Record Analysis – P1
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![ETL](https://img.shields.io/badge/ETL-Pipeline-green)
+![Healthcare](https://img.shields.io/badge/Domain-Healthcare-red)
 
+---
 
-**Project Overview:** 
+## 📌 Project Overview
 
+Digital Prescription Record Analysis is a Healthcare Informatics project designed to digitize, clean, validate, store, and analyze medical prescription records.
 
+The system implements an automated ETL pipeline using Python and stores structured, validated data in MySQL for analytical querying and visualization.
 
-This project focuses on digital prescription data management and analysis in the healthcare domain. It helps in managing, tracking, and analyzing electronic medical prescriptions to improve:
+---
 
+## 🎯 Objectives
 
+- Reduce prescription errors through strict validation
+- Digitize prescription record management
+- Ensure secure and structured data storage
+- Enable analytical insights for healthcare monitoring
+- Improve overall data quality using business rules
 
-&nbsp; 1)Record keeping
+---
 
+## 🏗️ System Architecture
 
-
-&nbsp; 2)Patient safety
-
-
-
-&nbsp; 3)Process efficiency for healthcare providers
-
-
-
-The system uses a Python-based ETL pipeline and MySQL database to clean, validate, and analyze prescription data.
-
-
-
-**Objective:**
-
-
-
-Digitize prescription management to reduce errors
-
-
-
-Enable real-time tracking and secure record storage
-
-
-
-Analyze prescription data for trends and quality monitoring
-
-
-
-**Business Rules to Be Implemented:**
-
-
-
-Age must be between 0–100
-
-
-
-Duplicate prescriptions are invalid
-
-
-
-Prescriptions without valid patient/doctor are rejected
-
-
-
-Missing dosage/frequency → "Not Provided"
-
-
-
-Unknown gender → "U"
-
-
-
-**Business Insights to be implemented using matplotlib:**
-
-
-
-Most frequently prescribed medicines
-
-Doctor-wise prescription volume comparison
-
-Gender-wise prescription distribution
-
-Age group vs number of prescriptions
-
-Detect doctors issuing unusually high prescriptions
-
-Daily prescription trend over time
-
-Data quality comparison (before vs after cleaning)
-
-
-
-**ETL Pipeline Flow:**
-
-
-
-CSV files (dirty data)
-
-&nbsp;       ↓
-
+```
+Raw CSV Files
+        ↓
 Python ETL (Pandas)
+   • Deduplication
+   • Null Handling
+   • Business Rule Validation
+        ↓
+MySQL Database
+   • Clean Tables
+   • Constraints Applied
+        ↓
+SQL Analytics
+        ↓
+Matplotlib / Seaborn Dashboards
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|--------|
+| Python | ETL Processing |
+| Pandas | Data Cleaning & Transformation |
+| MySQL | Relational Data Storage |
+| SQL | Analytical Queries |
+| Matplotlib | Data Visualization |
+| Seaborn | Advanced Visualization |
 
-&nbsp; - Deduplication
+---
 
-&nbsp; - Null handling
+## 📂 Project Structure
+
+```
+Digital-Prescription-P1/
+│
+├── data/
+│   ├── doctors_1000.csv
+│   ├── patients_1000.csv
+│   ├── medicines_1000.csv
+│   └── prescriptions_1000.csv
+│
+├── etl_pipeline.py
+├── analytics_queries.sql
+├── dashboards.py
+├── requirements.txt
+└── README.md
+```
 
-&nbsp; - Business rules
+---
 
-&nbsp;       ↓
+## ⚙️ Business Rules Implemented
 
-MySQL clean tables (DDL + constraints)
+- Age must be between 0–100
+- Duplicate prescriptions are invalid
+- Prescriptions without valid patient/doctor are rejected
+- Missing dosage/frequency → "Not Provided"
+- Unknown gender → "U"
 
-&nbsp;       ↓
+---
 
-SQL analytics + Matplotlib dashboards
+## 🔄 ETL Pipeline Details
 
+### 1️⃣ Extract
+- Load raw CSV datasets using Pandas
 
+### 2️⃣ Transform
+- Remove duplicate records
+- Handle missing values
+- Apply business rules
+- Validate foreign key relationships
+- Standardize formats
 
+### 3️⃣ Load
+- Insert cleaned data into MySQL
+- Apply primary key and foreign key constraints
+- Enforce NOT NULL conditions
 
+---
 
-**Technologies Used:** 
+## 📊 Analytics & Insights
 
+- Most frequently prescribed medicines
+- Doctor-wise prescription volume comparison
+- Gender-wise prescription distribution
+- Age group vs number of prescriptions
+- Detection of unusually high-prescribing doctors (IQR method)
+- Daily prescription trends
+- Data quality comparison (Before vs After Cleaning)
 
+---
 
-Python
+## 🚀 Installation & Setup
 
-Pandas
+### 1️⃣ Clone Repository
 
-numpy
+```bash
+git clone https://github.com/your-username/Digital-Prescription-P1.git
+cd Digital-Prescription-P1
+```
 
-MySQL
+### 2️⃣ Install Dependencies
 
-Matplotlib
+```bash
+pip install -r requirements.txt
+```
 
-SQL
+### 3️⃣ Configure Database
 
+- Create MySQL database
+- Update database credentials inside `etl_pipeline.py`
 
+### 4️⃣ Run ETL Pipeline
 
-**ETL Pipeline (Step-by-Step Process):**
+```bash
+python etl_pipeline.py
+```
 
+### 5️⃣ Run Dashboards
 
+```bash
+python dashboards.py
+```
 
-**Step 1: Data Collection**
+---
 
+## 🧪 Data Quality Validation
 
+- Missing value comparison (Before vs After)
+- Outlier detection using IQR
+- Referential integrity validation
+- Constraint enforcement at database level
 
-Raw CSV files with dirty/incomplete data are collected.
+---
 
+## 🔐 Data Integrity Measures
 
+- Primary Key Constraints
+- Foreign Key Constraints
+- NOT NULL Enforcement
+- Business Rule Validation
+- Duplicate Removal
 
-**Step 2: Data Cleaning**
+---
 
+## 📈 Sample Output
 
+- Clean MySQL tables
+- Terminal-based analytical summaries
+- Graphical dashboards using Matplotlib
 
-Using Pandas:
+---
 
+## 📚 Learning Outcomes
 
+- Real-world ETL pipeline implementation
+- Data cleaning and validation techniques
+- Relational database design
+- SQL-based analytics
+- Data visualization in Python
+- Healthcare data quality management
 
-Remove duplicates
+---
 
+## 👨‍💻 Author
 
+Mahender Reddy  
+Data Engineering Project  
+Healthcare Informatics  
 
-Handle null values
+---
 
+## 📄 License
 
-
-Apply business rules
-
-
-
-Standardize data formats
-
-
-
-**Step 3: Apply Business Rules**
-
-
-
-Age must be between 0–100
-
-
-
-Duplicate prescriptions are invalid
-
-
-
-Prescriptions without valid patient/doctor are rejected
-
-
-
-Missing dosage/frequency → "Not Provided"
-
-
-
-Unknown gender → "U" 
-
-
-
-6fdfea99-e578-4661-87b6-631cca8…
-
-
-
-**Step 4: Data Storage**
-
-
-
-Cleaned data is stored in MySQL tables with:
-
-
-
-DDL
-
-
-
-Constraints
-
-
-
-Proper relationships
-
-
-
-**Step 5: Data Analysis**
-
-
-
-SQL queries are used to analyze trends.
-
-
-
-**Step 6: Visualization**
-
-
-
-Matplotlib dashboards are created to visualize insights.
-
-
-
-ETL Flow:
-
-CSV → Python Cleaning → MySQL → SQL Analysis → Visualization
-
-
-
-**Business Insights Generated:** 
-
-
-
-Most frequently prescribed medicines
-
-
-
-Doctor-wise prescription comparison
-
-
-
-Gender-wise prescription distribution
-
-
-
-Age group vs prescription count
-
-
-
-Detect unusually high prescriptions by doctors
-
-
-
-Daily prescription trends
-
-
-
-Data quality comparison (before vs after cleaning)
-
-
-
-
-
-
-
+This project is developed for academic and learning purposes.
