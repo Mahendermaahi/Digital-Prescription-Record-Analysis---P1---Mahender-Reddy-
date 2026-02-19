@@ -41,7 +41,7 @@ MySQL Database
         ↓
 SQL Analytics
         ↓
-Matplotlib / Seaborn Dashboards
+Matplotlib 
 ```
 
 ---
@@ -55,7 +55,6 @@ Matplotlib / Seaborn Dashboards
 | MySQL | Relational Data Storage |
 | SQL | Analytical Queries |
 | Matplotlib | Data Visualization |
-| Seaborn | Advanced Visualization |
 
 ---
 
@@ -174,10 +173,14 @@ python dashboards.py
 ---
 
 ## 📈 Sample Output
-
-- Clean MySQL tables
-- Terminal-based analytical summaries
-- Graphical dashboards using Matplotlib
+<img width="554" height="516" alt="download" src="https://github.com/user-attachments/assets/b897e035-7261-420c-9bb0-a9b04c9fbada" />
+<img width="554" height="505" alt="download" src="https://github.com/user-attachments/assets/49f773e7-70e8-4ab6-8e0a-dbd1c3ef2519" />
+<img width="389" height="409" alt="download" src="https://github.com/user-attachments/assets/e2a95375-164a-4fc9-9ef4-6ef318cc80c6" />
+<img width="989" height="490" alt="download" src="https://github.com/user-attachments/assets/2aafa606-7584-45de-9060-6f0a42e62282" />
+<img width="580" height="433" alt="download" src="https://github.com/user-attachments/assets/ad1b1c89-3ea3-4cbe-b9cc-ba221c8a27fd" />
+<img width="571" height="453" alt="download" src="https://github.com/user-attachments/assets/e0427d87-5892-49b4-9611-cdc1df148a75" />
+<img width="989" height="490" alt="download" src="https://github.com/user-attachments/assets/6a0e6644-ab32-4b20-bf47-a13afdf6ee83" />
+<img width="690" height="390" alt="download" src="https://github.com/user-attachments/assets/09860d84-c7bb-4f65-a131-cf007d4ee9c5" />
 
 ---
 
