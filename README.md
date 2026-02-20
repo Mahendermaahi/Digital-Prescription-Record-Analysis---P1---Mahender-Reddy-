@@ -63,14 +63,22 @@ Matplotlib
 ```
 Digital-Prescription-P1/
 │
-│── doctors_1000.csv
-│── patients_1000.csv
-│── medicines_1000.csv
-│── prescriptions_1000.csv
-├── Digital Prescription Record Analysis-P1.py
-├── Digital Prescription Record Analysis DDL.txt
-├── Digital Prescription Record Analysis.docx
-├── Digital Prescrption Problem statement_with_Business Rules _Business Insights.txt
+│── data/
+│      │── doctors_1000.csv
+│      │── patients_1000.csv
+│      │── medicines_1000.csv
+│      │── prescriptions_1000.csv
+│
+├── notebooks/
+│      │── Digital Prescription ETL Pipeline.py
+│
+├── Sql/
+│      │── Digital Prescription Record Analysis DDL.txt
+│
+├── Project info/
+│      │── Digital Prescription Record Analysis.docx
+│      │── Digital Prescrption Problem statement_with_Business Rules _Business Insights.txt
+│
 ├── requirements.txt
 └── README.md
 ```
